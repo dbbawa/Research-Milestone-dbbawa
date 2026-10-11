@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}Portfolio Overview{% endblock %}
+{% block content %}
+<h1 style="margin:0;">Portfolio Overview</h1>
+
+<div class="stats">
+  <div class="stat"><div class="label">Total Properties</div><div class="value">{{ properties|length }}</div></div>
+  <div class="stat"><div class="label">Total Units</div><div class="value">{{ total_units }}</div></div>
+</div>
+
+{% if properties %}
+  <div class="grid">
+    {% for p in properties %}
+      <div class="card">
+        <div class="banner">{{ p.name|slice:":1" }}</div>
+        <div class="body">
+          <h3>{{ p.name }}</h3>
+          <div class="addr">{{ p.address }}</div>
+          <div class="meta">{{ p.units.count }} units</div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% else %}
+  <div class="empty">No properties are available.</div>
+{% endif %}
+{% endblock %}
