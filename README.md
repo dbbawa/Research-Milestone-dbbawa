@@ -1,7 +1,5 @@
 # Research-Milestone-dbbawa
 
-Django
-
 Sample app for the Estate Property Management capstone project (Gitty_up), built with Django to evaluate it as our tech stack.
 
 ## What it does
