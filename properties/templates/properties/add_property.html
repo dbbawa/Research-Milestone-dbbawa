@@ -1,9 +1,9 @@
 {% extends "base.html" %}
-{% block title %}Add Property{% endblock %}
+{% block title %}{{ title|default:"Add Property" }}{% endblock %}
 {% block content %}
-<h1 style="margin-top:0;">Add Property</h1>
+<h1 style="margin-top:0;">{{ title|default:"Add Property" }}</h1>
 <div class="login-card" style="margin:0;">
-  <form method="post">
+    <form method="post" enctype="multipart/form-data">
     {% csrf_token %}
     {{ form.as_p }}
     <button class="btn" type="submit">Save property</button>
