@@ -25,6 +25,6 @@ Then open http://127.0.0.1:8000 and sign in.
 
 ## My notes on Django
 - **Pros:** login, sessions, and the admin panel came built in.
-- **Cons:** pages are server-rendered templates.
+- **Cons:** Pages reload on each action, so the app feels less “app-like” than a React-style front end that updates parts of the page without reloading.
 - **Setup difficulty:** not too difficult.
 - **Would I recommend it for our project?** yes
