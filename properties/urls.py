@@ -3,4 +3,5 @@ from . import views
 
 urlpatterns = [
     path('', views.property_list, name='property_list'),
+    path('properties/add/', views.add_property, name='add_property'),
 ]
